@@ -27,9 +27,9 @@ const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.b
  */
 registerBlockType( 'cgb/block-mfy-hero-primary', {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-	title: __( 'Hero (Primary)' ), // Block title.
-	icon: 'shield', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
-	category: 'common', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
+	title: __( 'Hero (Primary)', 'hero-primary'), // Block title.
+	icon: 'format-image', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
+	category: 'mfy', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
 	keywords: [
 		__( 'MFY' ),
 		__( 'Hero (Primary)' ),
@@ -41,7 +41,7 @@ registerBlockType( 'cgb/block-mfy-hero-primary', {
 		},
 		background_type: {
 			type: 'string',
-		}
+		},
 	},
 
 	/**
