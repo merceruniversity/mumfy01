@@ -27,14 +27,22 @@ const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.b
  */
 registerBlockType( 'cgb/block-mfy-hero-primary', {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-	title: __( 'mfy-hero-primary - CGB Block' ), // Block title.
+	title: __( 'Hero (Primary)' ), // Block title.
 	icon: 'shield', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
 	category: 'common', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
 	keywords: [
-		__( 'mfy-hero-primary — CGB Block' ),
-		__( 'CGB Example' ),
+		__( 'MFY' ),
+		__( 'Hero (Primary)' ),
 		__( 'create-guten-block' ),
 	],
+	attributes: {
+		id: {
+			type: 'string',
+		},
+		background_type: {
+			type: 'string',
+		}
+	},
 
 	/**
 	 * The edit function describes the structure of your block in the context of the editor.
@@ -43,6 +51,9 @@ registerBlockType( 'cgb/block-mfy-hero-primary', {
 	 * The "edit" property must be a valid function.
 	 *
 	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
+	 * 
+	 * @param {object} props The Properties of the block
+	 * @return {string} The Rendered HTML
 	 */
 	edit: function( props ) {
 		// Creates a <p class='wp-block-cgb-block-mfy-hero-primary'></p>.
@@ -71,6 +82,9 @@ registerBlockType( 'cgb/block-mfy-hero-primary', {
 	 * The "save" property must be specified and must be a valid function.
 	 *
 	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
+	 *
+	 * @param {object} props The properties of the block
+	 * @return {string} The Rendered HTML
 	 */
 	save: function( props ) {
 		return (
