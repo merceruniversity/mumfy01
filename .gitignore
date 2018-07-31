@@ -125,3 +125,5 @@ wp-content/plugins/hello.php
 
 
 # End of https://www.gitignore.io/api/macos,phpstorm,wordpress
+
+/**/.DS_Store
